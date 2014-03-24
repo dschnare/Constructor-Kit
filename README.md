@@ -50,6 +50,8 @@ Supports Nodejs, AMD and loading as a global browser `<script>`.
 
 ## Reference
 
+    constructorKit(constructor)
+    constructorKit(constructor, prototypeProperties)
     constructorKit(constructor, prototypeProperties, prototypeChain)
     // Aliases: ck
 
