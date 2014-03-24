@@ -43,6 +43,8 @@
         }
       }
     }
+
+    return dest;
   };
 
   if (typeof exports === 'object' && exports) {
