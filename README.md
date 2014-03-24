@@ -3,7 +3,7 @@ Constructor-Kit
 
 Constructor Kit is a simple, convenient and backward compatible constructor creation API for JavaScript.
 
-Supports Nodejs, AMD and loading as a global browser `<script>`.
+Supports Nodejs, Bower, AMD and loading as a global browser `<script>`.
 
 
 ## Advantages
