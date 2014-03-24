@@ -1,0 +1,10 @@
+{
+  "name": "Constructor-Kit",
+  "version": "0.0.1",
+  "main": "constructor-kit.js",
+  "ignore": [
+    "LICENSE",
+    "*.json",
+    "*.md"
+  ]
+}
