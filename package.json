@@ -1,0 +1,17 @@
+{
+  "name": "Constructor-Kit",
+  "version": "0.0.1",
+  "description": "A simple, convenient and backward compatible constructor construction API for JavaScript.",
+  "main": "constructor-kit.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dschnare/Constructor-Kit.git"
+  },
+  "author": "Darren Schnare <schnare.d@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dschnare/Constructor-Kit/issues"
+  },
+  "homepage": "https://github.com/dschnare/Constructor-Kit"
+}
