@@ -20,6 +20,9 @@ Example usage:
       }
     };
 
+    // NOTE: ck() is an alias for constructorKit() when the constructor-kit.js
+    // file is being included in the browser.
+
     var C = ck(function (message) {
       this.message = message;
     }, {
