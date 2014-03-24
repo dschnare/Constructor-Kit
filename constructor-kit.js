@@ -16,7 +16,7 @@
       constructor.prototype = ck.create(prototypeChain);
       ck.mixin(constructor.prototype, prototypeProperties);
     } else {
-      constructor.prototype = prototypeProperties;
+      constructor.prototype = ck.mixin({}, prototypeProperties);
     }
 
     constructor.prototype.constructor = constructor;
@@ -45,11 +45,12 @@
     }
   };
 
-  if (typeof module === 'object' && module.exports) {
-    module.exports = ck;
+  if (typeof exports === 'object' && exports) {
+    exports.ck = ck;
+    exports.constructorKit = ck;
   } else if (typeof define === 'function' && define.amd) {
     define([], function () {
-      return ck;
+      return {ck: ck, constructorKit: ck};
     });
   } else {
     global.ck = ck;

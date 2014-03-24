@@ -3,16 +3,17 @@ Constructor-Kit
 
 Constructor Kit is a simple, convenient and backward compatible constructor creation API for JavaScript.
 
+Supports Nodejs, AMD and loading as a global browser `<script>`.
 
-**Advantages:**
+
+## Advantages
 
 - Built on core JavaScript features, introduces no new concepts
 - Works with all legacy and new JavaScript frameworks
 - Extremely lightweight and easy to use
 
 
-Example usage:
-
+## Example usage
 
     var o = {
       toString: function () {
@@ -20,10 +21,7 @@ Example usage:
       }
     };
 
-    // NOTE: ck() is an alias for constructorKit() when the constructor-kit.js
-    // file is being included in the browser.
-
-    var C = ck(function (message) {
+    var C = constructorKit(function (message) {
       this.message = message;
     }, {
       toString: function () {
@@ -31,7 +29,7 @@ Example usage:
       }
     }, o);
 
-    var D = ck(function () {
+    var D = constructorKit(function () {
       C.call(this, 'Message from D!');
     }, {
       toString: function () {
@@ -42,6 +40,18 @@ Example usage:
     var c = new C('Hello World!');
     var d = new D();
 
-    console.log('o.toString:', o.toString()); // ':>[object Object]'
-    console.log('c.toString:', c.toString()); // 'Hello World!:>[object Object]
-    console.log('d.toString:', d.toString()); // 'MESSAGE FROM D!:>[OBJECT OBJECT]'
+    // Logs: ':>[object Object]'
+    console.log('o.toString:', o.toString()); 
+    // Logs: 'Hello World!:>[object Object]
+    console.log('c.toString:', c.toString()); 
+    // Logs: 'MESSAGE FROM D!:>[OBJECT OBJECT]'
+    console.log('d.toString:', d.toString());
+
+
+## Reference
+
+    constructorKit(constructor, prototypeProperties, prototypeChain)
+    // Aliases: ck
+
+The parameter `constructor` is the actual constructor and the `prototypeProperties` parameter is a plain JavaScript object containing all the properties to have mixed into the constructor's prototype. The `prototypeChain` is an object or function (i.e. another constructor). A prototype chain will be created with the object or with the function's `prototype` property and assigned to the `prototype` property of the `constructor` parameter before returning the `constructor`.
+
