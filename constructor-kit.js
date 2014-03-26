@@ -9,6 +9,8 @@
       prototypeProperties = {};
     }
 
+    prototypeProperties = prototypeProperties || {};
+
     if (typeof prototypeChain === 'function') {
       constructor.prototype = ck.create(prototypeChain.prototype);
       ck.mixin(constructor.prototype, prototypeProperties);

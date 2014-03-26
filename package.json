@@ -8,6 +8,9 @@
     "type": "git",
     "url": "git://github.com/dschnare/Constructor-Kit.git"
   },
+  "devDependencies": {
+    "jasmine-core": "~2.0.0"
+  },
   "author": "Darren Schnare <schnare.d@gmail.com>",
   "license": "MIT",
   "bugs": {
