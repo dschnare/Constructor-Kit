@@ -15,6 +15,9 @@ Supports Nodejs, Bower, AMD and loading as a global browser `<script>`.
 
 ## Example usage
 
+    // The constructorKit() function is aliased by ck() for your convenience.
+    // For this example we'll use constructorKit() and not its alias.
+
     var o = {
       toString: function () {
         return ':>' + Object.prototype.toString.call(this);
