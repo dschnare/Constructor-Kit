@@ -57,3 +57,5 @@ Supports Nodejs, Bower, AMD and loading as a global browser `<script>`.
 
 The parameter `constructor` is the actual constructor and the `prototypeProperties` parameter is a plain JavaScript object containing all the properties to have mixed into the constructor's prototype. The `prototypeChain` is an object or function (i.e. another constructor). A prototype chain will be created with the object or with the function's `prototype` property and assigned to the `prototype` property of the `constructor` parameter before returning the `constructor`.
 
+*NOTE: `prototypeProperties` can be null.
+
