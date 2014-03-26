@@ -1,6 +1,6 @@
 {
   "name": "Constructor-Kit",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "main": "constructor-kit.js",
   "ignore": [
     "spec/*",
