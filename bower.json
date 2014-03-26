@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "main": "constructor-kit.js",
   "ignore": [
-    "LICENSE",
+    "spec/*",
+    "*.html",
     "*.json",
     "*.md"
   ]
