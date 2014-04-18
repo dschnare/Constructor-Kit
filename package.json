@@ -1,5 +1,5 @@
 {
-  "name": "Constructor-Kit",
+  "name": "constructor-kit",
   "version": "0.0.4",
   "description": "A simple, convenient and backward compatible constructor construction API for JavaScript.",
   "main": "constructor-kit.js",
