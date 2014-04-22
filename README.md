@@ -5,6 +5,14 @@ Constructor Kit is a simple, convenient and backward compatible constructor crea
 
 Supports Nodejs, Bower, AMD and loading as a global browser `<script>`.
 
+## Install
+
+    bower install constructor-kit
+
+Or
+
+    npm install constructor-kit
+
 
 ## Advantages
 
