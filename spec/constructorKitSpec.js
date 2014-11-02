@@ -1,3 +1,5 @@
+var ck = require('../constructor-kit');
+
 describe('constructorKit', function () {
   beforeEach(function () {
     jasmine.addMatchers({
@@ -20,15 +22,17 @@ describe('constructorKit', function () {
   });
 
   it('should have an alias', function () {
-    expect(window.constructorKit).toBeCallable();
-    expect(window.constructorKit).toBe(window.ck);
+    expect(ck).toBeCallable();
+    // Legacy API
+    expect(ck).toBe(ck.ck);
+    expect(ck).toBe(ck.constructorKit);
   });
 
   it('should return the same constructor passed in', function () {
     var a, b;
 
     a = function () {};
-    b = window.ck(a);
+    b = ck(a);
 
     expect(a).toBe(b);
   });
@@ -36,21 +40,21 @@ describe('constructorKit', function () {
   it('should set the prototype properties', function () {
     var a, b, c;
 
-    a = window.ck(function () {
+    a = ck(function () {
     }, {
       hello: function () {
         return 'hello';
       }
     });
 
-    b = window.ck(function () {
+    b = ck(function () {
     }, {
       hi: function () {
         return 'hi';
       }
     });
 
-    c = window.ck(function () {
+    c = ck(function () {
     }, {
       howdy: function () {
         return 'howdy';
@@ -73,21 +77,21 @@ describe('constructorKit', function () {
   it('should preserve prototype chain', function () {
     var a, b, c;
 
-    a = window.ck(function () {
+    a = ck(function () {
     }, {
       hello: function () {
         return 'hello';
       }
     });
 
-    b = window.ck(function () {
+    b = ck(function () {
     }, {
       hi: function () {
         return 'hi';
       }
     }, a);
 
-    c = window.ck(function () {
+    c = ck(function () {
     }, {
       howdy: function () {
         return 'howdy';
@@ -122,7 +126,7 @@ describe('constructorKit', function () {
       }
     };
 
-    b = window.ck(function () {
+    b = ck(function () {
       this.hi = function () {
         return 'hi';
       };

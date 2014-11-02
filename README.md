@@ -14,6 +14,21 @@ Or
     npm install constructor-kit
 
 
+## Bower
+
+To use the component you will have to bundle the component using a tool like [Browserify](http://browserify.org).
+For example:
+
+*./public/modules/app.js*:
+
+    var ck = require('constructor-kit')
+    console.log(typeof ck)
+
+*command line*:
+
+    browserify -t debowerify ./public/modules/app.js > ./public/app.max.js
+
+
 ## Advantages
 
 - Built on core JavaScript features, introduces no new concepts
@@ -22,9 +37,6 @@ Or
 
 
 ## Example usage
-
-    // The constructorKit() function is aliased by ck() for your convenience.
-    // For this example we'll use constructorKit() and not its alias.
 
     var o = {
       toString: function () {
@@ -64,7 +76,6 @@ Or
     constructorKit(constructor)
     constructorKit(constructor, prototypeProperties)
     constructorKit(constructor, prototypeProperties, prototypeChain)
-    // Aliases: ck
 
 The parameter `constructor` is the actual constructor and the `prototypeProperties` parameter is a plain JavaScript object containing all the properties to have mixed into the constructor's prototype. The `prototypeChain` is an object or function (i.e. another constructor). A prototype chain will be created with the object or with the function's `prototype` property and assigned to the `prototype` property of the `constructor` parameter before returning the `constructor`.
 
